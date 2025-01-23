@@ -279,9 +279,9 @@ def main():
     slow("    [01] Exit This Tool ")
     slow("    [02] About This Tool ")
     slow("    [03] Crash WhatsApp User ")
-    slow("    [04] Crash WhatsApp Group ")
+    slow("    [04] Crash WhatsApp Group/Channel ")
     slow("    [05] Send Red Flag to WhatsApp User ")
-    slow("    [06] Send Red Flag to WhatsApp Group ")
+    slow("    [06] Send Red Flag to WhatsApp Group/Channel ")
     ec = input("    \n[Enter Choice]>> ")
 
     if ec in ['01','1']:
@@ -300,7 +300,7 @@ def main():
     elif ec in ['04','4']:
         os.system("clear || cls")
         banner()
-        url = input('[+] Copy and Paste Group URL Here: ')
+        url = input('[+] Copy and Paste Group/Channel URL Here: ')
         multipro(url)
     elif ec in ['05','5']:
         os.system("clear || cls")
@@ -312,7 +312,7 @@ def main():
     elif ec in ['06','6']:
         os.system("clear || cls")
         banner()
-        url = input('[+] Copy and Paste Group URL Here: ')
+        url = input('[+] Copy and Paste Group/Channel URL Here : ')
         pro(url)
     else:
         slow('[-] Invalid Choice...')
