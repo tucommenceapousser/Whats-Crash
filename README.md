@@ -63,5 +63,7 @@ Feel free to used this tool maliciously but respectively, Becouse this tool was 
 - Fork our repositories
 - Also give our repository a star
 
-<div align='center'>LET ACT WICKED AND CRASHES THIRE WHATSAPP 😈👿😈... </div>
+<div align='center'>LET ACT WICKED AND CRASHES THIRE WHATSAPP... 
+ 
+😈👿😈</div>
 
