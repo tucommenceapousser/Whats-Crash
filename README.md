@@ -17,8 +17,8 @@ this tool allow an attacker to conduct DOS attack against whatsapp user, whatsap
 
 <div align='center'>
  
-[Crashed](https://github.com/evilfeonix/Whats-Crash/blob/main/Screenshot_a.png)
-[Crashed_](https://github.com/evilfeonix/Whats-Crash/blob/main/Screenshot_b.png)
+![Crashed](https://github.com/evilfeonix/Whats-Crash/blob/main/Screenshot_a.png)
+![Crashed_](https://github.com/evilfeonix/Whats-Crash/blob/main/Screenshot_b.png)
 
 </div>
 
