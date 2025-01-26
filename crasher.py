@@ -1,9 +1,12 @@
-
-import os, sys, time, urllib
+import os, sys, time, json
 from socket import *
 import phonenumbers
-import requests
-import json
+
+try:
+    import requests
+    import urllib
+except:
+    os.system("pip install urllib requests")
 
 ipaddr = gethostbyname(gethostname())
 max_data = (((707+111+1011)*3)-1396)+5 #4096
