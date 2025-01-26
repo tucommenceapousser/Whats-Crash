@@ -6,7 +6,7 @@ try:
     import requests
     import urllib
 except:
-    os.system("pip install urllib requests")
+    os.system("pip install requests urllib")
 
 ipaddr = gethostbyname(gethostname())
 max_data = (((707+111+1011)*3)-1396)+5 #4096
