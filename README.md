@@ -1,7 +1,10 @@
 
 <div align='center'>
+ 
  # Whats-Crash
+ 
 </div>
+
 Crash or suspend any whatsapp user, group, or channel by just sending them malicious payload
 
 this tool allow an attacker to conduct DOS attack against whatsapp user, whatsapp group, and also whatsapp channel by just sending them a malicious payload which will then crashes the targetted whatsapp account imidiately. This version of whatsapp crashing  tool is so powerful and can cause whatsapp to always deny the targetted phone number in creating an account due to whatsapp notice a strange and powerful attack against the number. It can also crash your whatsapp too, recommended to used PC that has no whatsapp account on it, while using this tool.
