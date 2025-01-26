@@ -36,7 +36,7 @@ def aboutus():
     slow("    Author: evilfeonix")
     slow("    Github: EVil FeoniX")
     slow("    Youtube: EVil FeoniX")
-    slow("    Update: 23 - JAN - 2025")
+    slow("    Update: 26 - JAN - 2025")
     slow(f"==========================================================={white}")
 
 
@@ -265,7 +265,7 @@ def multipro(victim):
     Victim: {victim}        
     Sent: {i}        
     Failed: {j}        
-        {bg}{red}Press Ctr+C to stop Attacks\033[0m{red}
+        {bg}{red}Subscribe To Our Youtube Channel\033[0m{red}
 ==========================================================={white}
             """)
 def pro(victim):
@@ -294,7 +294,7 @@ def pro(victim):
     Victim: {victim}        
     Sent: {i}        
     Failed: {j}        
-        {bg}{red}Press Ctr+C to stop Attacks\033[0m{red}
+        {bg}{red}Subscribe To Our Youtube Channel\033[0m{red}
 ==========================================================={white}
             """)
     else:
@@ -334,7 +334,7 @@ def main():
     ec = input("    \n[Enter Choice]>> ")
 
     if ec in ['01','1']:
-        slow('[-] Thanks for using this tool\nFollow us on github for more...')
+        slow(f'{red}[-] Thanks for using this tool\nFollow us on github for more...{white}\n')
     elif ec in ['02','2']:
         os.system("clear || cls")
         banner()
@@ -364,7 +364,7 @@ def main():
         url = input('[+] Copy and Paste Group/Channel URL Here : ')
         pro(url)
     else:
-        slow('[-] Invalid Choice...')
+        slow(f'{red}[-] Invalid Choice...{white}\n')
         os.sys.exit()
     
     
