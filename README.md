@@ -48,9 +48,9 @@ python3 crasher.py
     [01] Exit This Tool 
     [02] About This Tool 
     [03] Crash WhatsApp User 
-    [04] Crash WhatsApp Group 
+    [04] Crash WhatsApp Group/Channel
     [05] Send Red Flag to WhatsApp User 
-    [06] Send Red Flag to WhatsApp Group 
+    [06] Send Red Flag to WhatsApp Group/Channel 
 
 [Enter Choice]>> 
 ```
