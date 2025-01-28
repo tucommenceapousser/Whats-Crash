@@ -29,7 +29,7 @@ def internet():
 
 def aboutus():
     slow("    Tool Name: Whats Crash")
-    slow("    Version: v[1.1]")
+    slow("    Version: v[1.2]")
     slow("    Author: evilfeonix")
     slow("    Github: Digital Firebird")
     slow("    Youtube: Digital Firebird")
