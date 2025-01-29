@@ -5,9 +5,9 @@
  
 </div>
 
-Crash or suspend any whatsapp user, group, or channel by just sending them malicious payload
+Crash and suspend any whatsapp user, group, or channel by just sending them malicious payload
 
-this tool allow an attacker to conduct DOS attack against whatsapp user, whatsapp group, and also whatsapp channel by just sending them a malicious payload which will then crashes the targetted whatsapp account imidiately. This version of whatsapp crashing  tool is so powerful and can cause whatsapp to always deny the targetted phone number in creating an account due to whatsapp notice a strange and powerful attack against the number. It can also crash your whatsapp too, recommended to used PC that has no whatsapp account on it, while using this tool.
+this tool allow an attacker to conduct DOS attack against whatsapp user, whatsapp group, and also whatsapp channel by just sending them a malicious payload which will then crashes the targetted whatsapp account in next 24 hour. This version of whatsapp crashing  tool is so powerful and can cause whatsapp to always deny the targetted phone number in creating an account due to whatsapp notice bad activities that not follow their policy. It can also crash your whatsapp too, recommended to used PC that has no whatsapp account on it, while using this tool.
 
 > Tips: Let this tool to sent like 70 to 100 malicious message, before stopping the attack.
 
@@ -61,7 +61,7 @@ Feel free to used this tool maliciously but respectively, Becouse this tool was 
 # Support Up
 - Follow our github profile
 - Fork our repositories
-- Also give our repository a star
+- Also give our us a star
 
 <div align='center'>LET ACT WICKED AND CRASHES THIRE WHATSAPP... 
  
