@@ -33,7 +33,7 @@ git clone https://github.com/evilfeonix/Whats-Crash.git
 cd Whats-Crash
 ```
 ```
-pip install requests, phonenumbers
+pip install requests phonenumbers
 ```
 ```
 python3 crasher.py 
