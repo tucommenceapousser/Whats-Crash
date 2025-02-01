@@ -33,6 +33,9 @@ git clone https://github.com/evilfeonix/Whats-Crash.git
 cd Whats-Crash
 ```
 ```
+pip install requests, phonenumbers
+```
+```
 python3 crasher.py 
 ```
 
@@ -61,7 +64,7 @@ Feel free to used this tool maliciously but respectively, Becouse this tool was 
 # Support Up
 - Follow our github profile
 - Fork our repositories
-- Also give our us a star
+- Also give us a star
 
 <div align='center'>LET ACT WICKED AND CRASHES THIRE WHATSAPP... 
  
