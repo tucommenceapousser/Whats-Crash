@@ -3,7 +3,7 @@
 # Name: WhatsApp Crashing Tool
 # Website: www.evilfeonix.com 
 # Email: evilfeonix@gmail.com 
-# Latest Update: 08 - FEBUARY - 2025
+# Latest Update: 10 - FEBUARY - 2025
 
 
 ######   Welcoming to WhatsApp Crasher...
@@ -40,7 +40,7 @@ def aboutus():
     slow("    Author         :   evilfeonix")
     slow("    Github         :   Digital Firebird")
     slow("    Youtube        :   Digital Firebird")
-    slow("    Latest Update  :   08 - FEB - 2025")
+    slow("    Latest Update  :   10 - FEB - 2025")
     slow(f"==========================================================={white}\n")
 
 
@@ -249,18 +249,23 @@ def updateus():
         local_hash = get_local_hash(script_path)
         
         if remote_hash and local_hash and remote_hash == local_hash:
-            print("No update available.")
+            time.sleep(2)
+            print(f"Whats-Crash is Up-To Date.{white}\n")
             return
         
-        # Download the latest script
-        print("Downloading latest script...")
+        time.sleep(1)
+        print(f"Update Found...")
+        time.sleep(1)
+        print(f"Downloading latest Version...")
+        time.sleep(3)
         urllib.request.urlretrieve(script_url, script_path)
+        print(f"Whats-Crash Successfully Updated...{white}\n")
         
-        # Restart the script
-        print("Restarting script...")
-        os.execv(sys.executable, [sys.executable] + sys.argv)
+        # # Restart the script
+        # print("Restarting script...")
+        # os.execv(sys.executable, [sys.executable] + sys.argv)
     except Exception as e:
-        print(f"Error updating script: {e}")
+        print(f"Error Updating Whats-Crash: {e}{white}\n")
 
 
 def notFound(url):
