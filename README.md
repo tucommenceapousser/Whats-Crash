@@ -2,7 +2,8 @@
 <div align='center'>
  
  # Whats-Crash
- 
+ ![what-crash](https://github.com/user-attachments/assets/63cef334-ce5b-47bd-9e45-38d5761ddf4d)
+
 </div>
 
 Crash and suspend any whatsapp user, group, or channel by just sending them malicious payload
@@ -12,6 +13,10 @@ this tool allow an attacker to conduct DOS attack against whatsapp user, whatsap
 > Tips: Let this tool to sent like 70 to 100 malicious message, before stopping the attack.
 
 > Important: Targetted Whatsapp account can only be crush, or suspended in the next 24 hours after the attack.
+
+> Important Note: When you crash someone's whatsapp, their profile will still be visible to other peoples, but on the other hand, whatsapp has knock them out of their account, they can't access it, see their chat despite to chat with friends.
+
+> Tips: If you launch an attack to your victims, text them after 24 hour of the attack, if they didn't view your text message or replay you, and it long than you expected, it means u successfully crash their whatsapp
 
 # WhatsApp Crashed, Screenshot
 
