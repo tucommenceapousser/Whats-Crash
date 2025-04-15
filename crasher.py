@@ -1,8 +1,8 @@
 # Versoin: 1.3
-# Author: evilfeonix
+# Author: trh4ckn0n
 # Name: WhatsApp Crashing Tool
-# Website: www.evilfeonix.com 
-# Email: evilfeonix@gmail.com 
+# Website: www.trh4ckn0n.com 
+# Email: trh4ckn0n@gmail.com 
 # Latest Update: 15 - FEBUARY - 2025
 
 
@@ -36,12 +36,12 @@ def internet():
 
 def aboutus():
     slow("    Version        ::   v[1.3]")
-    slow("    Author         ::   evilfeonix")
+    slow("    Author         ::   trh4ckn0n")
     slow("    Tool Name      ::   Whats Crash")
     slow("    Latest Update  ::   15 - FEB - 2025")
     slow("    Github         ::   Digital Firebird")
     slow("    Youtube        ::   Digital Firebird")
-    slow("    Email Address  ::   evilfeonix@gmail.com")
+    slow("    Email Address  ::   trh4ckn0n@gmail.com")
     slow(f"==========================================================={white}\n")
 
 
@@ -82,17 +82,17 @@ except:
 
 
 def set_malicious_payload(user):
-    user_payload = f"‎‏\n\tattacker's message: {user}\n\t‎‏\n\tattacke's ip: {ipaddr}\n\twhatsapp crasher, created by ëvĩʟ-fɘōɳĭx 😈☠😈" if user else ""
+    user_payload = f"‎‏\n\tattacker's message: {user}\n\t‎‏\n\tattacke's ip: {ipaddr}\n\twhatsapp crasher, created by trh4ckn0n 😈☠😈" if user else ""
 
     data = {
         "attacker": f"{user_payload}",
-        "ëvĩʟ-fɘōɳĭx": """HAHAHA!.\n\twe are 🎭 anonymous,\n\twe represent freedom,\n\twe oppose oppression,\n\twe are simply an evolution 🧬 of the technology system 👨🏾‍💻,\n\twhere liberty 🗽 is at risk,\n\texpect us 👥.
+        "trh4ckn0n": """HAHAHA!.\n\twe are 🎭 anonymous,\n\twe represent freedom,\n\twe oppose oppression,\n\twe are simply an evolution 🧬 of the technology system 👨🏾‍💻,\n\twhere liberty 🗽 is at risk,\n\texpect us 👥.
 
     ======================================================================================
-        ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
-    ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
-    ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
-    ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+        ‎‏         >> trh4ckn0n 😈☠😈  <<      ‎‏ 
+    ‎‏      >> whatsapp virus by trh4ckn0n  <<      ‎‏
+    ‎‏ >> https://github.com/trh4ckn0n/Whats-Crasher << ‎‏ 
+    ‎‏ >> Whats-Crasher by trh4ckn0n hacker 😈☠😈 << ‎‏ 
     ======================================================================================
         """,
         "malicious-payload": """
@@ -108,7 +108,7 @@ def set_malicious_payload(user):
     2 0 obj
     <<
     /Title (Whatsapp\055Crasher)
-    /Author (coded\040by\040evilfeonix)
+    /Author (coded\040by\040trh4ckn0n)
     >>
     endobj
     3 0 obj
@@ -174,18 +174,18 @@ def set_malicious_payload(user):
     /Filter /DCTDecode
     /ColorTransform 0
     /Length 3311
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>‎‏    ëvĩʟ-fɘōɳĭx 😈☠😈
-    >>    https://www.evilfeonix.com      <<
-            www.evilfeonix@gmail.com  
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>‎‏    trh4ckn0n 😈☠😈
+    >>    https://www.trh4ckn0n.com      <<
+            www.trh4ckn0n@gmail.com  
         """
     }
 
@@ -195,38 +195,38 @@ def set_malicious_payload(user):
     
     data["Hacker"] = f"""  attacker's ip: {ipaddr}...
     ======================================================================================
-            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
-        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
-        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
-        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+            ‎‏         >> trh4ckn0n 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by trh4ckn0n  <<      ‎‏
+        ‎‏ >> https://github.com/trh4ckn0n/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by trh4ckn0n hacker 😈☠😈 << ‎‏ 
     ======================================================================================"""
     data["Hacker1"] = f"""  attacker's ip: {ipaddr}...
     ======================================================================================
-            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
-        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
-        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
-        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+            ‎‏         >> trh4ckn0n 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by trh4ckn0n  <<      ‎‏
+        ‎‏ >> https://github.com/trh4ckn0n/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by trh4ckn0n hacker 😈☠😈 << ‎‏ 
     ======================================================================================"""
     data["Hacker2"] = f"""  attacker's ip: {ipaddr}...
     ======================================================================================
-            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
-        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
-        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
-        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+            ‎‏         >> trh4ckn0n 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by trh4ckn0n  <<      ‎‏
+        ‎‏ >> https://github.com/trh4ckn0n/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by trh4ckn0n hacker 😈☠😈 << ‎‏ 
     ======================================================================================"""
     data["Hacker3"] = f"""  attacker's ip: {ipaddr}...   
     ======================================================================================
-            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
-        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
-        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
-        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+            ‎‏         >> trh4ckn0n 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by trh4ckn0n  <<      ‎‏
+        ‎‏ >> https://github.com/trh4ckn0n/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by trh4ckn0n hacker 😈☠😈 << ‎‏ 
     ======================================================================================"""
     data["Hacker4"] = f"""  attacker's ip: {ipaddr}...
     ======================================================================================
-            ‎‏         >> ëvĩʟ-fɘōɳĭx 😈☠😈  <<      ‎‏ 
-        ‎‏      >> whatsapp virus by ëvĩʟ-fɘōɳĭx  <<      ‎‏
-        ‎‏ >> https://github.com/evilfeonix/Whats-Crasher << ‎‏ 
-        ‎‏ >> Whats-Crasher by ëvĩʟ-fɘōɳĭx hacker 😈☠😈 << ‎‏ 
+            ‎‏         >> trh4ckn0n 😈☠😈  <<      ‎‏ 
+        ‎‏      >> whatsapp virus by trh4ckn0n  <<      ‎‏
+        ‎‏ >> https://github.com/trh4ckn0n/Whats-Crasher << ‎‏ 
+        ‎‏ >> Whats-Crasher by trh4ckn0n hacker 😈☠😈 << ‎‏ 
     ======================================================================================"""
 
     return data
@@ -251,7 +251,7 @@ def get_local_hash(script_path):
 
 def updateus(): 
     try:
-        script_url = "https://github.com/evilfeonix/Whats-Crash/raw/main/crasher.py"
+        script_url = "https://github.com/trh4ckn0n/Whats-Crash/raw/main/crasher.py"
         script_path = os.path.abspath(__file__)
         
         remote_hash = get_remote_hash(script_url)
@@ -304,13 +304,13 @@ def notFound(url):
     Fork our Repositories  
     Give our Repositories a Star
     Contribute to our Repositories  
-    Contact us at evilfeonix@gmail.com 
+    Contact us at trh4ckn0n@gmail.com 
 
            [+] Subscribe To Our YouTube Channel [+]
 ==========================================================={white}""")
     input(f"{red}Press [ENTER] to Continue...{white}") 
-    evilfeonix="https://github.com/evilfeonix" 
-    os.system(f"xdg-open {evilfeonix}")
+    trh4ckn0n="https://github.com/trh4ckn0n" 
+    os.system(f"xdg-open {trh4ckn0n}")
     print(f"{white}") 
     os.sys.exit()
  
@@ -406,13 +406,13 @@ def multipro(victim):
     Fork our Repositories  
     Give our Repositories a Star
     Contribute to our Repositories  
-    Contact us at evilfeonix@gmail.com 
+    Contact us at trh4ckn0n@gmail.com 
 
            [+] Subscribe To Our YouTube Channel [+]
 ==========================================================={white}""")
     input(f"{red}Press [ENTER] to Continue...{white}") 
-    evilfeonix="https://github.com/evilfeonix" 
-    os.system(f"xdg-open {evilfeonix}")
+    trh4ckn0n="https://github.com/trh4ckn0n" 
+    os.system(f"xdg-open {trh4ckn0n}")
     print(f"{white}") 
     os.sys.exit()
 
@@ -458,13 +458,13 @@ def main():
     Fork our Repositories  
     Give our Repositories a Star
     Contribute to our Repositories  
-    Contact us at evilfeonix@gmail.com 
+    Contact us at trh4ckn0n@gmail.com 
 
            [+] Subscribe To Our YouTube Channel [+]
 ==========================================================={white}""")
         input(f"{red}Press [ENTER] to Continue{white}") 
-        evilfeonix="https://github.com/evilfeonix" 
-        os.system(f"xdg-open {evilfeonix}")
+        trh4ckn0n="https://github.com/trh4ckn0n" 
+        os.system(f"xdg-open {trh4ckn0n}")
         print(f"{white}") 
         os.sys.exit()
     elif ec in ['01','1']:
